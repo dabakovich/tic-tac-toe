@@ -7,9 +7,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 8,
   },
-  button: {
-    marginVertical: 8,
-  },
   row: {
     flexDirection: 'row',
   },

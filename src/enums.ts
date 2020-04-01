@@ -1,9 +1,7 @@
-enum Value {
-  null = '',
-  x = 'X',
-  o = 'O',
-};
+type Value = string;
 
 const SIZE = 3;
 
-export { Value, SIZE };
+export { SIZE };
+export type { Value };
+

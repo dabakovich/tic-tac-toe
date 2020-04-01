@@ -7,16 +7,23 @@ type Coordinates = {
 
 type ValuesType = Array<Value[]>;
 
-type SquareProps = {
-  x: number;
-  y: number;
+type SquareProps = {};
+
+type SquareState = {
   value: Value;
-  onPress: (coordinates: Coordinates) => void;
 };
 
-type BoardProps = {
+type BoardProps = {};
+
+type BoardState = {
   values: ValuesType;
-  onPress: (coordinates: Coordinates) => void;
 };
 
-export type { Coordinates, ValuesType, SquareProps, BoardProps, };
+export type {
+  Coordinates,
+  ValuesType,
+  SquareProps,
+  SquareState,
+  BoardProps,
+  BoardState
+};

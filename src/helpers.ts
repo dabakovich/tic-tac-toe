@@ -2,7 +2,7 @@ import { SIZE, Value } from './enums';
 import { ValuesType } from './types';
 
 const fillValues = () => {
-  const values: Array<Value[]> = [];
+  const values: ValuesType = [];
 
   for (let x = 0; x < SIZE; x++) {
     if (!values[x]) {
@@ -10,49 +10,21 @@ const fillValues = () => {
     }
 
     for (let y = 0; y < SIZE; y++) {
-      values[x][y] = Value.null;
+      values[x][y] = '';
     }
   }
 
   return values;
 };
 
-const calculateWinner = (values: ValuesType) => {
-  for (let x = 0; x < SIZE; x++) {
-    if (!values[x][0]) {
-      continue;
-    }
+/**
+ * Please put here your implementation of the winner calculation
+ * 
+ * @param values 
+ */
+const calculateWinner = (values: ValuesType): Value => {
 
-    // Check all values in the ROW
-    if (values[x].every(value => value === values[x][0])) {
-      return values[x][0];
-    }
-  }
-
-  for (let y = 0; y < SIZE; y++) {
-    if (!values[0][y]) {
-      continue;
-    }
-
-    // Check all values in the COLUMN
-    if (values.map(row => row[y]).every(value => value === values[0][y])) {
-      return values[0][y];
-    }
-  }
-
-  if (values[0][0]) {
-    if (values.every((value, i) => value[i] === values[0][0])) {
-      return values[0][0];
-    }
-  }
-
-  if (values[SIZE - 1][0]) {
-    if (values.every((value, i) => value[SIZE - 1 - i] === values[SIZE - 1][0])) {
-      return values[SIZE - 1][0];
-    }
-  }
-
-  return Value.null;
+  return '';
 };
 
 export { fillValues, calculateWinner };

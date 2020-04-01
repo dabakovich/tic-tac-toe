@@ -3,13 +3,17 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import { Game } from './src/game';
+import { Board } from './src/game';
 
-const App: React.FC = () => (
-  <View style={styles.root}>
-    <Game />
-  </View>
-);
+class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.root}>
+        <Board />
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   root: {
